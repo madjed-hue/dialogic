@@ -9,7 +9,7 @@ import { db } from "@/lib/db";
 
 import { ServerHeader } from "./server-header";
 import { ServerSearch } from "./server-search";
-// import { ServerSection } from "./server-section";
+import { ServerSection } from "./server-section";
 // import { ServerChannel } from "./server-channel";
 // import { ServerMember } from "./server-member";
 
@@ -127,7 +127,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
           />
         </div>
         <Separator className="bg-zinc-200 dark:bg-zinc-700 rounded-md my-2" />
-        {/* 
+
         {!!textChannels?.length && (
           <div className="mb-2">
             <ServerSection
@@ -136,7 +136,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
               role={role}
               label="Text Channels"
             />
-            <div className="space-y-[2px]">
+            {/* <div className="space-y-[2px]">
               {textChannels.map((channel) => (
                 <ServerChannel
                   key={channel.id}
@@ -145,9 +145,10 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                   server={server}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         )}
+        {/* 
         {!!audioChannels?.length && (
           <div className="mb-2">
             <ServerSection
