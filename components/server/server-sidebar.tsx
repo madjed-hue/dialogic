@@ -11,7 +11,7 @@ import { ServerHeader } from "./server-header";
 import { ServerSearch } from "./server-search";
 import { ServerSection } from "./server-section";
 import { ServerChannel } from "./server-channel";
-// import { ServerMember } from "./server-member";
+import { ServerMember } from "./server-member";
 
 interface ServerSidebarProps {
   serverId: string;
@@ -148,7 +148,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
             </div>
           </div>
         )}
-        {/* 
+
         {!!audioChannels?.length && (
           <div className="mb-2">
             <ServerSection
@@ -169,6 +169,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
             </div>
           </div>
         )}
+
         {!!videoChannels?.length && (
           <div className="mb-2">
             <ServerSection
@@ -203,7 +204,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
               ))}
             </div>
           </div>
-        )} */}
+        )}
       </ScrollArea>
     </div>
   );
