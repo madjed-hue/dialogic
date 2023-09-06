@@ -10,7 +10,7 @@ import { db } from "@/lib/db";
 import { ServerHeader } from "./server-header";
 import { ServerSearch } from "./server-search";
 import { ServerSection } from "./server-section";
-// import { ServerChannel } from "./server-channel";
+import { ServerChannel } from "./server-channel";
 // import { ServerMember } from "./server-member";
 
 interface ServerSidebarProps {
@@ -136,7 +136,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
               role={role}
               label="Text Channels"
             />
-            {/* <div className="space-y-[2px]">
+            <div className="space-y-[2px]">
               {textChannels.map((channel) => (
                 <ServerChannel
                   key={channel.id}
@@ -145,7 +145,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
                   server={server}
                 />
               ))}
-            </div> */}
+            </div>
           </div>
         )}
         {/* 
