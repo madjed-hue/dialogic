@@ -18,14 +18,12 @@ interface MemberIdPageProps {
     video?: boolean;
   };
 }
-
 const MemberIdPage = async ({ params, searchParams }: MemberIdPageProps) => {
   const profile = await currentProfile();
 
   if (!profile) {
     return redirectToSignIn();
   }
-
   const currentMember = await db.member.findFirst({
     where: {
       serverId: params.serverId,
